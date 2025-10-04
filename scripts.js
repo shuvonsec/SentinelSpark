@@ -1,47 +1,61 @@
-const nav = document.getElementById('siteNav');
-const navToggle = document.getElementById('navToggle');
-const yearEl = document.getElementById('currentYear');
+document.addEventListener("DOMContentLoaded", () => {
+  const navToggle = document.getElementById("navToggle");
+  const siteNav = document.getElementById("siteNav");
 
-if (navToggle && nav) {
-  navToggle.addEventListener('click', () => {
-    const isOpen = nav.classList.toggle('open');
-    navToggle.setAttribute('aria-expanded', String(isOpen));
-    navToggle.classList.toggle('active', isOpen);
-  });
+  const toggleNav = () => {
+    const isOpen = siteNav.classList.toggle("is-open");
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+  };
 
-  nav.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => {
-      if (nav.classList.contains('open')) {
-        nav.classList.remove('open');
-        navToggle.setAttribute('aria-expanded', 'false');
-        navToggle.classList.remove('active');
+  navToggle?.addEventListener("click", toggleNav);
+
+  siteNav?.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      if (siteNav.classList.contains("is-open")) {
+        toggleNav();
       }
     });
   });
-}
 
-if (yearEl) {
-  yearEl.textContent = new Date().getFullYear();
-}
+  const tabButtons = document.querySelectorAll(".tab-button");
+  const panels = document.querySelectorAll(".panel");
 
-const tabButtons = document.querySelectorAll('.tab-button');
-const panels = document.querySelectorAll('.panel');
+  tabButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      if (button.classList.contains("active")) return;
 
-tabButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    const targetId = button.dataset.tab;
-    if (!targetId) return;
+      const targetId = button.dataset.tab;
 
-    tabButtons.forEach((btn) => {
-      const isActive = btn === button;
-      btn.classList.toggle('active', isActive);
-      btn.setAttribute('aria-selected', String(isActive));
-    });
+      tabButtons.forEach((btn) => {
+        btn.classList.toggle("active", btn === button);
+        btn.setAttribute("aria-selected", String(btn === button));
+      });
 
-    panels.forEach((panel) => {
-      const isActive = panel.id === targetId;
-      panel.classList.toggle('active', isActive);
-      panel.setAttribute('aria-hidden', String(!isActive));
+      panels.forEach((panel) => {
+        panel.classList.toggle("active", panel.id === targetId);
+      });
     });
   });
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      rootMargin: "0px 0px -10% 0px",
+      threshold: 0.15,
+    }
+  );
+
+  document.querySelectorAll("[data-animate]").forEach((el) => observer.observe(el));
+
+  const yearEl = document.getElementById("currentYear");
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
 });

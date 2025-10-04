@@ -6,7 +6,7 @@
     <title>SentinelSpark | Train Smart. Click Safe.</title>
     <meta
       name="description"
-      content="SentinelSpark helps modern teams beat phishing with immersive simulations, instant coaching, and crystal-clear reporting."
+      content="SentinelSpark delivers immersive phishing simulations, instant coaching, and proof-ready reporting so teams build unbreakable security habits."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,146 +17,154 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div class="global-bg" aria-hidden="true">
+      <div class="orb orb-one"></div>
+      <div class="orb orb-two"></div>
+      <div class="orb orb-three"></div>
+      <div class="grid-lines"></div>
+    </div>
     <header class="site-header" id="top">
       <div class="container header-container">
-        <a class="brand" href="#top">
+        <a class="brand" href="#top" aria-label="SentinelSpark home">
           <span class="brand-mark">⚡</span>
           <span class="brand-text">Sentinel<span>Spark</span></span>
         </a>
         <nav class="site-nav" id="siteNav">
-          <a href="#why">Why SentinelSpark</a>
           <a href="#platform">Platform</a>
-          <a href="#results">Impact</a>
-          <a href="#pricing">Pricing</a>
+          <a href="#outcomes">Outcomes</a>
+          <a href="#experience">Learner experience</a>
           <a href="#msp">For MSPs</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#resources">Resources</a>
           <a href="#demo" class="nav-cta">Book a demo</a>
         </nav>
         <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav">
-          <span class="sr-only">Toggle menu</span>
-          <span class="bar" aria-hidden="true"></span>
-          <span class="bar" aria-hidden="true"></span>
-          <span class="bar" aria-hidden="true"></span>
+          <span class="sr-only">Toggle navigation</span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
         </button>
       </div>
     </header>
 
     <main>
       <section class="hero" id="hero">
-        <div class="container hero-content">
-          <div class="hero-copy">
-            <span class="hero-badge">Train Smart. Click Safe.</span>
-            <h1>Make phishing training feel like a power-up, not a penalty.</h1>
+        <div class="container hero-container">
+          <div class="hero-copy" data-animate>
+            <span class="eyebrow">Train Smart. Click Safe.</span>
+            <h1>The human firewall your company loves to power up.</h1>
             <p>
-              SentinelSpark blends AI-crafted phishing simulations, instant micro-coaching, and binge-worthy
-              cybersecurity lessons into a single platform your people actually love using.
+              SentinelSpark fuses AI-crafted phishing simulations, adaptive coaching, and cinematic dashboards so every
+              employee learns to outsmart the inbox in minutes, not months.
             </p>
             <div class="hero-actions">
-              <a class="btn primary" href="#demo">See SentinelSpark in action</a>
-              <a class="btn secondary" href="#platform">Explore the platform</a>
+              <a class="btn primary" href="#demo">See the live platform</a>
+              <a class="btn ghost" href="#platform">Tour the product</a>
             </div>
             <dl class="hero-metrics">
               <div>
                 <dt>63%</dt>
-                <dd>Average reduction in risky clicks after 90 days.</dd>
+                <dd>Risky clicks eliminated after 90 days on average.</dd>
               </div>
               <div>
-                <dt>2m</dt>
-                <dd>Micro-coaching is delivered instantly in under 2 minutes.</dd>
+                <dt>92</dt>
+                <dd>Threat readiness score for top-performing teams.</dd>
               </div>
               <div>
-                <dt>40+</dt>
-                <dd>Ready-to-send phishing campaigns with AI suggestions.</dd>
+                <dt>&lt;2m</dt>
+                <dd>Instant micro-lessons delivered after every simulation.</dd>
               </div>
             </dl>
           </div>
           <div class="hero-visual" aria-hidden="true">
-            <div class="dashboard-card">
+            <div class="floating-card dashboard" data-animate data-delay="100">
               <header>
-                <div class="pill live">Live</div>
-                <span>Threat Readiness Score</span>
-                <strong>92</strong>
+                <span>Live campaign</span>
+                <strong>Executive payroll sweep</strong>
               </header>
-              <div class="chart">
-                <div class="chart-line"></div>
-                <div class="chart-pulse"></div>
+              <div class="dashboard-body">
+                <div class="chart">
+                  <div class="sparkline"></div>
+                </div>
+                <ul class="metrics">
+                  <li>
+                    <span>Reported</span>
+                    <strong>78%</strong>
+                  </li>
+                  <li>
+                    <span>Clicked</span>
+                    <strong>4%</strong>
+                  </li>
+                  <li>
+                    <span>Credential entry</span>
+                    <strong>0%</strong>
+                  </li>
+                </ul>
               </div>
-              <ul class="insights">
-                <li>
-                  <span class="label">Phishing resilience</span>
-                  <span class="value">↑ 34%</span>
-                </li>
-                <li>
-                  <span class="label">Reporting speed</span>
-                  <span class="value">↑ 2.1x</span>
-                </li>
-                <li>
-                  <span class="label">Remediation time</span>
-                  <span class="value">↓ 46%</span>
-                </li>
-              </ul>
             </div>
-            <div class="lesson-card">
-              <span class="chip">Instant coaching</span>
-              <h3>You spotted the fake domain!</h3>
-              <p>Next up: learn how urgency and tone reveal social engineering in 90 seconds.</p>
-              <button class="btn tertiary">Start lesson</button>
+            <div class="floating-card lesson" data-animate data-delay="200">
+              <span class="chip">Micro-coaching</span>
+              <h3>You spotted the mismatched domain!</h3>
+              <p>Next clue: urgency tactics. Spend 90 seconds to master social-engineer tone recognition.</p>
+              <button class="btn inline">Start the lesson</button>
+            </div>
+            <div class="floating-card pulse" data-animate data-delay="300">
+              <strong>Threat feed</strong>
+              <p>AI suggests: "Vendor payout diversion" — queued for finance team tomorrow at 9:00.</p>
             </div>
           </div>
         </div>
-        <div class="hero-glow" aria-hidden="true"></div>
+        <div class="hero-marquee" aria-label="Trusted teams">
+          <div class="marquee-track">
+            <span>NovaLabs</span>
+            <span>RelayOne</span>
+            <span>BlueLattice</span>
+            <span>CloudForge</span>
+            <span>Brightline Health</span>
+            <span>Velox Media</span>
+            <span>PrimeLedger</span>
+            <span>OrbitX</span>
+          </div>
+        </div>
       </section>
 
-      <section class="section trust" id="trust">
+      <section class="section impact" id="outcomes">
         <div class="container">
-          <p class="eyebrow">Trusted by modern, fast-growing teams</p>
-          <div class="trust-logos">
-            <span>Orbitly</span>
-            <span>NeonPeak</span>
-            <span>Shieldsmith</span>
-            <span>BlueWave</span>
-            <span>AxisCore</span>
-            <span>BrightForge</span>
-          </div>
-        </div>
-      </section>
-
-      <section class="section why" id="why">
-        <div class="container two-col">
-          <div class="section-header">
-            <span class="eyebrow">Why SentinelSpark</span>
-            <h2>Goodbye checkbox training. Hello continuous human resilience.</h2>
+          <div class="section-heading" data-animate>
+            <span class="eyebrow">Provable outcomes</span>
+            <h2>Make security culture measurable, magnetic, and board-ready.</h2>
             <p>
-              Security awareness shouldn’t be a yearly slideshow. SentinelSpark keeps people engaged every week with
-              personal, data-driven coaching journeys that measurably reduce risk.
+              Spotlight risk reductions in real time, keep compliance teams delighted, and prove ROI with executive-grade
+              reports that land with impact.
             </p>
           </div>
-          <div class="feature-grid">
-            <article>
-              <h3>Hyper-real simulations</h3>
-              <p>
-                Launch realistic phishing tests in minutes, tuned to the latest attack trends and the tools your teams use
-                daily.
-              </p>
+          <div class="impact-grid">
+            <article class="impact-card" data-animate>
+              <h3>Risk heatmap</h3>
+              <p>Pinpoint vulnerable departments instantly with adaptive risk scoring and predictive alerts.</p>
+              <ul>
+                <li>Drill down by team, location, or campaign.</li>
+                <li>Trigger refresher coaching automatically.</li>
+                <li>Share interactive reports in one click.</li>
+              </ul>
             </article>
-            <article>
-              <h3>Instant positive coaching</h3>
-              <p>
-                Celebrate smart clicks and turn mistakes into aha moments with micro-lessons that are bite-sized, friendly,
-                and game-inspired.
-              </p>
+            <article class="impact-card" data-animate data-delay="100">
+              <h3>Executive briefs</h3>
+              <p>Deliver slide-ready summaries with benchmarks, trends, and compliance evidence built in.</p>
+              <ul>
+                <li>ISO 27001 &amp; SOC 2-ready audit trails.</li>
+                <li>Auto-generated PDF + CSV exports.</li>
+                <li>Quarterly insights for board packs.</li>
+              </ul>
             </article>
-            <article>
-              <h3>Insights execs love</h3>
-              <p>
-                Give leadership the live dashboards and exportable reports they need to prove ROI and meet compliance in a
-                few clicks.
-              </p>
-            </article>
-            <article>
-              <h3>Built to scale effortlessly</h3>
-              <p>
-                From 10 seats to 10,000, automate provisioning, reminders, and MSP management without a single spreadsheet.
-              </p>
+            <article class="impact-card" data-animate data-delay="200">
+              <h3>Behavioral nudges</h3>
+              <p>Celebrate smart clicks with confetti and streaks, while targeted nudges coach risky users back to safe.</p>
+              <ul>
+                <li>Localized in 12 languages.</li>
+                <li>Slack, Teams, and email notifications.</li>
+                <li>Gamified leaderboards and badges.</li>
+              </ul>
             </article>
           </div>
         </div>
@@ -164,168 +172,212 @@
 
       <section class="section platform" id="platform">
         <div class="container">
-          <div class="section-heading">
+          <div class="section-heading" data-animate>
             <span class="eyebrow">Platform tour</span>
-            <h2>One workspace that predicts, prevents, and proves human security.</h2>
+            <h2>One cinematic workspace for every stage of human defense.</h2>
           </div>
-          <div class="platform-layout">
+          <div class="platform-shell" data-animate>
             <div class="platform-tabs" role="tablist" aria-label="Platform capabilities">
-              <button class="tab-button active" data-tab="simulate" role="tab" aria-selected="true">Simulate</button>
-              <button class="tab-button" data-tab="coach" role="tab" aria-selected="false">Coach</button>
-              <button class="tab-button" data-tab="measure" role="tab" aria-selected="false">Measure</button>
+              <button class="tab-button active" role="tab" data-tab="simulate" aria-selected="true">Simulate</button>
+              <button class="tab-button" role="tab" data-tab="coach" aria-selected="false">Coach</button>
+              <button class="tab-button" role="tab" data-tab="measure" aria-selected="false">Measure</button>
+              <button class="tab-button" role="tab" data-tab="automate" aria-selected="false">Automate</button>
             </div>
             <div class="platform-panels">
               <article class="panel active" id="simulate" role="tabpanel">
                 <div class="panel-copy">
-                  <h3>Launch smarter simulations with AI co-pilot.</h3>
+                  <h3>Simulate real attacks with AI co-pilot precision.</h3>
                   <p>
-                    Pick from 40+ playbooks or generate fresh scenarios using current phishing trends. Schedule waves,
-                    target riskier teams, and tailor landing pages with a few clicks.
+                    Generate phishing campaigns tuned to the latest threat intel, target high-risk teams, and launch in
+                    minutes with built-in SPF/DKIM guidance.
                   </p>
-                  <ul class="panel-list">
-                    <li>Verified sending domains with SPF/DKIM guidance.</li>
-                    <li>Adaptive difficulty that adjusts per employee.</li>
-                    <li>Real-time visibility into opens, clicks, and reports.</li>
+                  <ul>
+                    <li>40+ battle-tested templates with AI variants.</li>
+                    <li>Adaptive difficulty that adjusts per learner.</li>
+                    <li>Live dashboards for opens, clicks, and reports.</li>
                   </ul>
                 </div>
-                <div class="panel-visual" aria-hidden="true">
+                <div class="panel-visual">
                   <div class="panel-card">
                     <h4>Campaign builder</h4>
-                    <p>AI suggestion: "Quarter-end bonus confirmation"</p>
+                    <p>Scenario: Vendor wire confirmation</p>
                     <ul>
-                      <li>Audience: Finance &amp; Exec</li>
-                      <li>Send window: Tomorrow 9am</li>
-                      <li>Landing: Credential capture</li>
+                      <li>Audience: Finance + Exec</li>
+                      <li>Launch: Tomorrow 09:00</li>
+                      <li>Auto-nudge: Slack reminder</li>
                     </ul>
+                  </div>
+                  <div class="panel-card">
+                    <h4>Real-time pulse</h4>
+                    <p>Reporting rate climbing +12% in first hour.</p>
                   </div>
                 </div>
               </article>
-              <article class="panel" id="coach" role="tabpanel" aria-hidden="true">
+              <article class="panel" id="coach" role="tabpanel">
                 <div class="panel-copy">
-                  <h3>Coach in the moment with delightful micro-learning.</h3>
+                  <h3>Coach instantly with interactive, positive reinforcement.</h3>
                   <p>
-                    Every risky click triggers a personalized, friendly coaching experience that highlights the tells and
-                    builds lasting instincts.
+                    Redirect clicks to delightful micro-lessons that decode the red flags, celebrate quick reports, and
+                    keep streaks alive.
                   </p>
-                  <ul class="panel-list">
-                    <li>2-minute interactive lessons with branching scenarios.</li>
-                    <li>Positive reinforcement and badges to encourage reporting.</li>
-                    <li>Localized content in 14 languages out of the box.</li>
+                  <ul>
+                    <li>Localized lessons with scenario branching.</li>
+                    <li>Accessible WCAG AA design out of the box.</li>
+                    <li>Behavioral science-backed nudges and points.</li>
                   </ul>
                 </div>
-                <div class="panel-visual" aria-hidden="true">
+                <div class="panel-visual">
                   <div class="panel-card">
-                    <h4>Coaching moment</h4>
-                    <p>"Urgency + gift cards is a classic CEO fraud signal."</p>
-                    <button class="btn tertiary">Try a lesson</button>
+                    <h4>Lesson highlights</h4>
+                    <p>Identify tone, domain mismatch, and brand spoofing in 90 seconds.</p>
+                  </div>
+                  <div class="panel-card">
+                    <h4>Celebrate streaks</h4>
+                    <p>Agents earn XP and unlock team shields for consistent reporting.</p>
                   </div>
                 </div>
               </article>
-              <article class="panel" id="measure" role="tabpanel" aria-hidden="true">
+              <article class="panel" id="measure" role="tabpanel">
                 <div class="panel-copy">
-                  <h3>Prove progress with insights built for every stakeholder.</h3>
+                  <h3>Measure risk posture and crush compliance checklists.</h3>
                   <p>
-                    Track performance by team, risk persona, or geography. Export audits instantly or sync data with Slack,
-                    Teams, and SIEMs.
+                    Keep leadership and auditors aligned with live dashboards, exportable evidence, and benchmarks across
+                    industries.
                   </p>
-                  <ul class="panel-list">
-                    <li>Benchmark vs. peers in your industry.</li>
-                    <li>Automated monthly board-ready reports and PDFs.</li>
-                    <li>API access for custom dashboards and workflows.</li>
+                  <ul>
+                    <li>Executive-ready PDF decks auto-generated.</li>
+                    <li>Benchmarks by sector, size, and geography.</li>
+                    <li>Automated compliance attestations with audit logs.</li>
                   </ul>
                 </div>
-                <div class="panel-visual" aria-hidden="true">
+                <div class="panel-visual">
                   <div class="panel-card">
-                    <h4>Risk trajectory</h4>
-                    <p>Risk index down 47% since launch.</p>
-                    <ul>
-                      <li>Reporting rate: 68%</li>
-                      <li>Average lesson completion: 94%</li>
-                      <li>Compliance coverage: 100%</li>
-                    </ul>
+                    <h4>Quarterly briefing</h4>
+                    <p>Phishing resilience +37% vs Q1 peers.</p>
+                  </div>
+                  <div class="panel-card">
+                    <h4>Audit locker</h4>
+                    <p>All evidence archived with tamper-proof timestamps.</p>
+                  </div>
+                </div>
+              </article>
+              <article class="panel" id="automate" role="tabpanel">
+                <div class="panel-copy">
+                  <h3>Automate every workflow your security team hates.</h3>
+                  <p>
+                    Connect Slack, Teams, Google Workspace, Okta, and more to orchestrate enrollments, reminders, and
+                    escalations with zero busywork.
+                  </p>
+                  <ul>
+                    <li>Auto-provision with SCIM and HRIS sync.</li>
+                    <li>Playbooks for risky role onboarding.</li>
+                    <li>Webhook + API access for custom workflows.</li>
+                  </ul>
+                </div>
+                <div class="panel-visual">
+                  <div class="panel-card">
+                    <h4>Flow designer</h4>
+                    <p>Drag-and-drop triggers to automate targeted coaching journeys.</p>
+                  </div>
+                  <div class="panel-card">
+                    <h4>Integration hub</h4>
+                    <p>One-click connectors for Okta, Azure AD, Workday, Slack, and more.</p>
                   </div>
                 </div>
               </article>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section results" id="results">
-        <div class="container results-container">
-          <div class="results-intro">
-            <span class="eyebrow">Measured impact</span>
-            <h2>From first phishing test to culture shift—fast.</h2>
-            <p>
-              Teams using SentinelSpark create a new normal where reporting suspicious activity is instinctive and celebrated.
-            </p>
-          </div>
-          <div class="results-stats">
-            <article>
-              <h3>4.8/5</h3>
-              <p>Average learner satisfaction with coaching experience.</p>
-            </article>
-            <article>
-              <h3>3x</h3>
-              <p>Increase in reported phishing attempts within the first month.</p>
-            </article>
-            <article>
-              <h3>Zero</h3>
-              <p>Manual spreadsheets. Integrations keep provisioning, billing, and audits automatic.</p>
-            </article>
           </div>
         </div>
       </section>
 
       <section class="section experience" id="experience">
-        <div class="container two-col">
-          <div class="section-header">
-            <span class="eyebrow">Learner experience</span>
-            <h2>Gamified, inclusive, and built for how people learn today.</h2>
-            <p>
-              Micro-stories, unlockable badges, and adaptive reminders keep teams curious—not cynical. Mobile-ready lessons
-              mean everyone learns wherever they work.
-            </p>
-          </div>
-          <div class="experience-cards">
-            <article>
-              <h3>Playful by design</h3>
-              <p>Earn streaks, climb leaderboards, and celebrate safe reporting wins together.</p>
-            </article>
-            <article>
-              <h3>Accessible to all</h3>
-              <p>WCAG AA compliant lessons, closed captions, and localized voiceovers.</p>
-            </article>
-            <article>
-              <h3>Adaptive pathways</h3>
-              <p>Dynamic difficulty personalizes content based on confidence and performance.</p>
-            </article>
+        <div class="container">
+          <div class="experience-grid">
+            <div class="experience-copy" data-animate>
+              <span class="eyebrow">Learner experience</span>
+              <h2>Bite-sized lessons that feel more like winning than lecturing.</h2>
+              <p>
+                Learners earn streaks, badges, and rewards while practicing in hyper-real simulations that mirror the
+                apps they use daily.
+              </p>
+              <div class="experience-badges">
+                <span>Dark &amp; light modes</span>
+                <span>Mobile perfect</span>
+                <span>Accessibility-first</span>
+              </div>
+              <ul class="experience-steps">
+                <li data-animate>
+                  <span class="step-number">01</span>
+                  <div>
+                    <h3>Phish arrives</h3>
+                    <p>AI-curated templates mimic real vendor and executive requests with adaptive difficulty.</p>
+                  </div>
+                </li>
+                <li data-animate data-delay="100">
+                  <span class="step-number">02</span>
+                  <div>
+                    <h3>Instant feedback</h3>
+                    <p>Smart redirect celebrates safe behavior or coaches on the spot with audio, video, and quick polls.</p>
+                  </div>
+                </li>
+                <li data-animate data-delay="200">
+                  <span class="step-number">03</span>
+                  <div>
+                    <h3>Momentum builds</h3>
+                    <p>Weekly pulse checks, streaks, and team leaderboards keep everyone leaning into security.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="experience-visual" aria-hidden="true" data-animate data-delay="150">
+              <div class="device">
+                <div class="device-screen">
+                  <div class="device-header">
+                    <span class="pill">Lesson 4/12</span>
+                    <span class="timer">01:28</span>
+                  </div>
+                  <div class="device-body">
+                    <p class="question">Which red flag exposes this phishing attempt?</p>
+                    <div class="options">
+                      <button class="option">Suspicious sender domain</button>
+                      <button class="option">Urgent tone demanding immediate action</button>
+                      <button class="option">Request to log in with company credentials</button>
+                    </div>
+                    <div class="progress">
+                      <span>72% mastery</span>
+                      <div class="bar"><span style="width: 72%"></span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="confetti"></div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <section class="section msp" id="msp">
-        <div class="container two-col reverse">
-          <div class="section-header">
-            <span class="eyebrow">For Managed Service Providers</span>
-            <h2>Deliver elite awareness programs across every client in minutes.</h2>
-            <p>
-              SentinelSpark’s MSP mode unlocks white-label dashboards, automated billing, and multi-tenant controls so you can
-              scale security services without scaling headcount.
-            </p>
+        <div class="container msp-container">
+          <div class="section-heading" data-animate>
+            <span class="eyebrow">Built for MSPs</span>
+            <h2>Deliver premium human risk training across every client in minutes.</h2>
           </div>
-          <div class="msp-points">
-            <article>
-              <h3>Unified control center</h3>
-              <p>Manage campaigns, lessons, and reports across all tenants from one clean interface.</p>
+          <div class="msp-grid">
+            <article class="msp-card" data-animate>
+              <h3>Unified cockpit</h3>
+              <p>Manage every client from a single, permission-aware dashboard with smart alerts and roll-up reporting.</p>
             </article>
-            <article>
-              <h3>Brand it your way</h3>
-              <p>White-label portals, emails, and certificates in seconds.</p>
+            <article class="msp-card" data-animate data-delay="100">
+              <h3>Brandable portals</h3>
+              <p>White-label experiences, custom domains, and co-branded reports keep your MSP front and center.</p>
             </article>
-            <article>
-              <h3>Revenue ready</h3>
-              <p>Seat-based billing, flexible invoicing, and Stripe-powered automation.</p>
+            <article class="msp-card" data-animate data-delay="200">
+              <h3>Automated billing</h3>
+              <p>Stripe-powered seat tracking, usage-based invoicing, and revenue share dashboards included.</p>
+            </article>
+            <article class="msp-card" data-animate data-delay="300">
+              <h3>API-first</h3>
+              <p>Integrate with your RMM, PSA, or ticketing workflow to trigger playbooks and escalate in real time.</p>
             </article>
           </div>
         </div>
@@ -333,83 +385,86 @@
 
       <section class="section pricing" id="pricing">
         <div class="container">
-          <div class="section-heading">
+          <div class="section-heading" data-animate>
             <span class="eyebrow">Pricing</span>
-            <h2>Simple plans that scale with your people.</h2>
+            <h2>Plans that scale from scrappy startup to global enterprise.</h2>
           </div>
           <div class="pricing-grid">
-            <article class="pricing-card">
-              <span class="plan">Starter</span>
-              <h3>$0</h3>
-              <p>10 seats, 2 campaigns/month. Perfect for testing the waters.</p>
+            <article class="plan" data-animate>
+              <span class="plan-badge">Starter</span>
+              <h3>Free</h3>
+              <p>Perfect for teams kicking off human security habit-building.</p>
               <ul>
-                <li>Core phishing templates</li>
-                <li>Instant coaching &amp; 6 lessons</li>
-                <li>Live dashboard</li>
+                <li>Up to 10 seats</li>
+                <li>2 phishing campaigns / month</li>
+                <li>6 core micro-lessons</li>
+                <li>Email &amp; chat support</li>
               </ul>
-              <a class="btn tertiary" href="#demo">Get started</a>
+              <a class="btn ghost" href="#demo">Get started</a>
             </article>
-            <article class="pricing-card highlight">
-              <span class="plan">Pro</span>
-              <h3>$5<span>/user/mo</span></h3>
-              <p>Everything SMBs need for continuous training and reporting.</p>
+            <article class="plan highlight" data-animate data-delay="100">
+              <span class="plan-badge">Most popular</span>
+              <h3>$5<span>/user</span></h3>
+              <p>Everything SMBs need to turn employees into threat spotters.</p>
               <ul>
-                <li>Unlimited simulations &amp; lessons</li>
-                <li>AI template generator</li>
-                <li>Slack &amp; Teams integrations</li>
+                <li>Unlimited phishing campaigns</li>
+                <li>Full lesson library + translations</li>
+                <li>Slack &amp; Teams nudges</li>
+                <li>Advanced reporting &amp; exports</li>
               </ul>
-              <a class="btn primary" href="#demo">Start a free trial</a>
+              <a class="btn primary" href="#demo">Talk to sales</a>
             </article>
-            <article class="pricing-card">
-              <span class="plan">Business</span>
+            <article class="plan" data-animate data-delay="200">
+              <span class="plan-badge">Business</span>
               <h3>Let’s talk</h3>
-              <p>Advanced controls, MSP features, and custom success plans.</p>
+              <p>Premium MSP capabilities, API access, and tailored compliance suites.</p>
               <ul>
-                <li>Multi-tenant management</li>
-                <li>API &amp; SSO access</li>
-                <li>Dedicated success team</li>
+                <li>Unlimited tenants &amp; branding</li>
+                <li>SCIM provisioning + SSO</li>
+                <li>Custom report builder</li>
+                <li>Dedicated success partner</li>
               </ul>
-              <a class="btn tertiary" href="#demo">Contact sales</a>
+              <a class="btn ghost" href="#demo">Book a strategy call</a>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section stories" id="stories">
+      <section class="section testimonials" id="testimonials">
         <div class="container">
-          <div class="section-heading">
-            <span class="eyebrow">Customer love</span>
-            <h2>"SentinelSpark feels like a game. But the impact is serious."</h2>
+          <div class="section-heading" data-animate>
+            <span class="eyebrow">Loved by modern teams</span>
+            <h2>“The only security training our employees actually remind us to send.”</h2>
           </div>
-          <div class="story-grid">
-            <figure>
+          <div class="testimonial-grid">
+            <figure class="testimonial" data-animate>
               <blockquote>
-                “After one quarter, click-throughs dropped by 71%. Our people actively report phish now—it’s become part of
-                the culture.”
+                “Our click-through rate dropped from 24% to under 3% in two months. The dashboards make our board briefings
+                painless.”
               </blockquote>
               <figcaption>
-                <strong>Jordan Wells</strong>
-                <span>CISO, Northwind Retail</span>
+                <span class="name">Jules Ortega</span>
+                <span class="role">CISO, RelayOne</span>
               </figcaption>
             </figure>
-            <figure>
+            <figure class="testimonial" data-animate data-delay="100">
               <blockquote>
-                “The micro-lessons are so positive. Instead of shame, our employees feel empowered. Compliance audits take 30
-                minutes instead of days.”
+                “Employees actually compete to stay on top of the leaderboard. SentinelSpark made security culture fun for
+                the first time.”
               </blockquote>
               <figcaption>
-                <strong>Ava Chen</strong>
-                <span>Security Lead, Atlas Fintech</span>
+                <span class="name">Priya Natarajan</span>
+                <span class="role">People Ops, NovaLabs</span>
               </figcaption>
             </figure>
-            <figure>
+            <figure class="testimonial" data-animate data-delay="200">
               <blockquote>
-                “We run SentinelSpark across 18 clients. The MSP dashboard and automated billing have unlocked a brand-new
-                revenue stream.”
+                “As an MSP, it’s become our flagship service. The white-label experience and automated billing are a
+                game-changer.”
               </blockquote>
               <figcaption>
-                <strong>Diego Martín</strong>
-                <span>Founder, Horizon MSP</span>
+                <span class="name">Marcus Reed</span>
+                <span class="role">Founder, ShieldGuard MSP</span>
               </figcaption>
             </figure>
           </div>
@@ -417,30 +472,29 @@
       </section>
 
       <section class="section resources" id="resources">
-        <div class="container two-col">
-          <div class="section-header">
+        <div class="container resources-container">
+          <div class="section-heading" data-animate>
             <span class="eyebrow">Resources</span>
-            <h2>Stay ahead of the phishing curve.</h2>
-            <p>
-              Explore best practices, benchmark reports, and playbooks crafted by people who’ve seen every flavor of social
-              engineering.
-            </p>
+            <h2>Level up your human risk playbook.</h2>
           </div>
-          <div class="resource-list">
-            <article>
-              <h3>2025 Phishing Trends Report</h3>
-              <p>See how attackers are evolving—and how top teams respond.</p>
-              <a href="#" class="link">Download the report →</a>
+          <div class="resource-grid">
+            <article class="resource-card" data-animate>
+              <span class="pill">Playbook</span>
+              <h3>2024 Phishing Trends Report</h3>
+              <p>See the tactics attackers use most this quarter and how to counter them.</p>
+              <a href="#" class="resource-link">Download report</a>
             </article>
-            <article>
-              <h3>Incident Response Playbook</h3>
-              <p>Ready-to-use workflows for when a suspicious email hits the inbox.</p>
-              <a href="#" class="link">Get the playbook →</a>
+            <article class="resource-card" data-animate data-delay="100">
+              <span class="pill">Webinar</span>
+              <h3>Designing security training people love</h3>
+              <p>Learn how growth-stage startups built security habits that stick.</p>
+              <a href="#" class="resource-link">Save your seat</a>
             </article>
-            <article>
-              <h3>Security Culture Toolkit</h3>
-              <p>Templates, comms, and challenges that make awareness fun.</p>
-              <a href="#" class="link">Access the toolkit →</a>
+            <article class="resource-card" data-animate data-delay="200">
+              <span class="pill">Guide</span>
+              <h3>Human Risk Maturity Model</h3>
+              <p>Assess where your organization sits today and map the road to elite performance.</p>
+              <a href="#" class="resource-link">Read the guide</a>
             </article>
           </div>
         </div>
@@ -448,20 +502,24 @@
 
       <section class="section demo" id="demo">
         <div class="container demo-container">
-          <div class="demo-copy">
-            <span class="eyebrow">See it live</span>
-            <h2>Ready to spark a fearless security culture?</h2>
-            <p>Share a few details and our team will tailor a walkthrough to your environment.</p>
+          <div class="demo-copy" data-animate>
+            <span class="eyebrow">Ready to spark change?</span>
+            <h2>Book a live demo and see how quickly your team levels up.</h2>
+            <p>Pick a time that works and we’ll tailor the walkthrough to your current stack, culture, and compliance needs.</p>
           </div>
-          <form class="demo-form">
+          <form class="demo-form" data-animate data-delay="100">
+            <label>
+              Name
+              <input type="text" name="name" placeholder="Alex Johnson" required />
+            </label>
             <label>
               Work email
               <input type="email" name="email" placeholder="you@company.com" required />
             </label>
             <label>
               Company size
-              <select name="company-size">
-                <option value="" selected disabled>Select range</option>
+              <select name="size" required>
+                <option value="" disabled selected>Select range</option>
                 <option value="1-50">1-50</option>
                 <option value="51-200">51-200</option>
                 <option value="201-1000">201-1,000</option>
@@ -469,11 +527,11 @@
               </select>
             </label>
             <label>
-              What should we focus on?
-              <textarea name="focus" rows="3" placeholder="Phishing, reporting, MSP, compliance..."></textarea>
+              Main priority
+              <textarea name="priority" rows="4" placeholder="Tell us what success looks like" required></textarea>
             </label>
             <button type="submit" class="btn primary">Book my demo</button>
-            <p class="form-note">We’ll reply within one business day.</p>
+            <p class="form-note">We respond within one business day. No spam, ever.</p>
           </form>
         </div>
       </section>
@@ -481,37 +539,40 @@
 
     <footer class="site-footer">
       <div class="container footer-container">
-        <div>
-          <a class="brand" href="#top">
-            <span class="brand-mark">⚡</span>
-            <span class="brand-text">Sentinel<span>Spark</span></span>
-          </a>
-          <p>Empowering humans to detect and defeat social engineering—every day.</p>
-        </div>
-        <div class="footer-links">
+        <a class="brand" href="#top" aria-label="SentinelSpark home">
+          <span class="brand-mark">⚡</span>
+          <span class="brand-text">Sentinel<span>Spark</span></span>
+        </a>
+        <div class="footer-columns">
           <div>
-            <h4>Platform</h4>
-            <a href="#platform">Features</a>
-            <a href="#experience">Learner journey</a>
-            <a href="#msp">MSP mode</a>
+            <h3>Platform</h3>
+            <ul>
+              <li><a href="#platform">Product tour</a></li>
+              <li><a href="#experience">Learner experience</a></li>
+              <li><a href="#msp">MSP hub</a></li>
+              <li><a href="#pricing">Pricing</a></li>
+            </ul>
           </div>
           <div>
-            <h4>Company</h4>
-            <a href="#trust">Customers</a>
-            <a href="#resources">Resources</a>
-            <a href="#demo">Contact</a>
+            <h3>Resources</h3>
+            <ul>
+              <li><a href="#resources">Insights</a></li>
+              <li><a href="#demo">Book a demo</a></li>
+              <li><a href="#">Security status</a></li>
+              <li><a href="#">Privacy</a></li>
+            </ul>
           </div>
           <div>
-            <h4>Legal</h4>
-            <a href="#">Privacy</a>
-            <a href="#">Terms</a>
-            <a href="#">Security</a>
+            <h3>Connect</h3>
+            <ul>
+              <li><a href="#">LinkedIn</a></li>
+              <li><a href="#">YouTube</a></li>
+              <li><a href="#">Partner program</a></li>
+              <li><a href="mailto:hello@sentinelspark.com">hello@sentinelspark.com</a></li>
+            </ul>
           </div>
         </div>
-        <div class="footer-meta">
-          <p>© <span id="currentYear"></span> SentinelSpark. All rights reserved.</p>
-          <a href="#top" class="link">Back to top ↑</a>
-        </div>
+        <p class="footer-meta">© <span id="currentYear"></span> SentinelSpark. Built for modern, human-first security teams.</p>
       </div>
     </footer>
 
