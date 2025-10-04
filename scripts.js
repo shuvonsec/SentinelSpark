@@ -74,3 +74,42 @@ if (animatedItems.length) {
     animatedItems.forEach((el) => observer.observe(el));
   }
 }
+
+const parallaxItems = document.querySelectorAll('[data-parallax]');
+
+if (parallaxItems.length && !prefersReducedMotion.matches) {
+  const bounds = { width: window.innerWidth, height: window.innerHeight };
+  let targetX = 0;
+  let targetY = 0;
+  let ticking = false;
+
+  const updateParallax = () => {
+    parallaxItems.forEach((el) => {
+      const depth = Number(el.dataset.parallax) || 12;
+      const offsetX = targetX / depth;
+      const offsetY = targetY / depth;
+      el.style.setProperty('--parallax-x', `${offsetX}px`);
+      el.style.setProperty('--parallax-y', `${offsetY}px`);
+    });
+
+    ticking = false;
+  };
+
+  window.addEventListener('pointermove', (event) => {
+    const centerX = bounds.width / 2;
+    const centerY = bounds.height / 2;
+
+    targetX = ((event.clientX - centerX) / centerX) * 24;
+    targetY = ((event.clientY - centerY) / centerY) * 24;
+
+    if (!ticking) {
+      ticking = true;
+      requestAnimationFrame(updateParallax);
+    }
+  });
+
+  window.addEventListener('resize', () => {
+    bounds.width = window.innerWidth;
+    bounds.height = window.innerHeight;
+  });
+}

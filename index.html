@@ -43,28 +43,29 @@
 
     <main>
       <section class="hero" id="hero">
-        <div class="hero-background" aria-hidden="true">
-          <span class="hero-orbit hero-orbit--one"></span>
-          <span class="hero-orbit hero-orbit--two"></span>
-          <span class="hero-orbit hero-orbit--three"></span>
-          <span class="hero-particle"></span>
+        <div class="hero-layers" aria-hidden="true">
+          <div class="hero-aurora"></div>
+          <div class="hero-grid"></div>
+          <span class="hero-orb hero-orb--violet" data-parallax="18"></span>
+          <span class="hero-orb hero-orb--cyan" data-parallax="14"></span>
+          <span class="hero-orb hero-orb--emerald" data-parallax="10"></span>
         </div>
         <div class="container hero-content">
           <div class="hero-copy" data-animate>
             <span class="hero-badge">Train Smart. Click Safe.</span>
-            <h1>Make phishing training feel like a power-up, not a penalty.</h1>
+            <h1>The most loved way to build phishing-proof instincts.</h1>
             <p>
-              SentinelSpark blends AI-crafted phishing simulations, instant micro-coaching, and binge-worthy
-              cybersecurity lessons into a single platform your people actually love using.
+              SentinelSpark weaves hyper-real simulations, instant micro-coaching, and bingeable cyber lessons into a
+              cinematic experience that turns every inbox moment into a win.
             </p>
-            <div class="hero-bubbles" aria-hidden="true">
-              <span>AI-tailored phishing waves</span>
-              <span>Celebrate safe reporting</span>
-              <span>Global-ready content</span>
-            </div>
+            <ul class="hero-highlights" aria-label="Platform highlights">
+              <li><span>AI-orchestrated campaigns mirroring today’s threats.</span></li>
+              <li><span>Coaching moments that celebrate curiosity, not blame.</span></li>
+              <li><span>Executive-ready dashboards proving readiness live.</span></li>
+            </ul>
             <div class="hero-actions">
               <a class="btn primary" href="#demo">See SentinelSpark in action</a>
-              <a class="btn secondary" href="#platform">Explore the platform</a>
+              <a class="btn secondary" href="#platform">Tour the platform</a>
             </div>
             <dl class="hero-metrics">
               <div>
@@ -72,8 +73,8 @@
                 <dd>Average reduction in risky clicks after 90 days.</dd>
               </div>
               <div>
-                <dt>2m</dt>
-                <dd>Micro-coaching is delivered instantly in under 2 minutes.</dd>
+                <dt>120s</dt>
+                <dd>Instant coaching delivered while the moment still matters.</dd>
               </div>
               <div>
                 <dt>40+</dt>
@@ -82,40 +83,68 @@
             </dl>
           </div>
           <div class="hero-visual" aria-hidden="true" data-animate>
-            <div class="dashboard-card">
-              <header>
-                <div class="pill live">Live</div>
-                <span>Threat Readiness Score</span>
-                <strong>92</strong>
-              </header>
-              <div class="chart">
-                <div class="chart-line"></div>
-                <div class="chart-pulse"></div>
+            <div class="hero-visual-cards">
+              <div class="hero-card hero-card--score" data-parallax="8">
+                <header>
+                  <span class="pill live">Live</span>
+                  <span class="label">Threat readiness</span>
+                  <strong>92</strong>
+                </header>
+                <div class="hero-card-chart">
+                  <span class="spark spark--one"></span>
+                  <span class="spark spark--two"></span>
+                  <span class="spark spark--three"></span>
+                </div>
+                <ul class="hero-card-insights">
+                  <li>
+                    <span>Resilience lift</span>
+                    <strong>+34%</strong>
+                  </li>
+                  <li>
+                    <span>Reporting speed</span>
+                    <strong>2.1× faster</strong>
+                  </li>
+                  <li>
+                    <span>Remediation time</span>
+                    <strong>-46%</strong>
+                  </li>
+                </ul>
               </div>
-              <ul class="insights">
-                <li>
-                  <span class="label">Phishing resilience</span>
-                  <span class="value">↑ 34%</span>
-                </li>
-                <li>
-                  <span class="label">Reporting speed</span>
-                  <span class="value">↑ 2.1x</span>
-                </li>
-                <li>
-                  <span class="label">Remediation time</span>
-                  <span class="value">↓ 46%</span>
-                </li>
-              </ul>
+              <div class="hero-card hero-card--moment" data-parallax="11">
+                <span class="chip">Instant coaching</span>
+                <h3>You spotted the spoofed sender!</h3>
+                <p>Next up: learn how urgency and tone reveal social engineering in 90 seconds.</p>
+                <button class="btn tertiary">Start lesson</button>
+              </div>
             </div>
-            <div class="lesson-card">
-              <span class="chip">Instant coaching</span>
-              <h3>You spotted the fake domain!</h3>
-              <p>Next up: learn how urgency and tone reveal social engineering in 90 seconds.</p>
-              <button class="btn tertiary">Start lesson</button>
+            <div class="hero-lens" data-parallax="16">
+              <div class="hero-lens-grid">
+                <span class="hero-lens-spark hero-lens-spark--one"></span>
+                <span class="hero-lens-spark hero-lens-spark--two"></span>
+                <span class="hero-lens-spark hero-lens-spark--three"></span>
+                <span class="hero-lens-spark hero-lens-spark--four"></span>
+              </div>
+              <p>
+                Threat readiness
+                <strong>92</strong>
+              </p>
             </div>
           </div>
         </div>
-        <div class="hero-glow" aria-hidden="true"></div>
+        <div class="hero-floats" aria-hidden="true">
+          <div class="hero-float hero-float--report" data-parallax="6">
+            <strong>92%</strong>
+            <span>report suspicious mail in &lt;60s</span>
+          </div>
+          <div class="hero-float hero-float--lesson" data-parallax="9">
+            <strong>+34%</strong>
+            <span>resilience lift in 6 weeks</span>
+          </div>
+          <div class="hero-float hero-float--shield" data-parallax="12">
+            <span class="dot"></span>
+            <span>Adaptive protection across email, chat &amp; cloud</span>
+          </div>
+        </div>
         <div class="scroll-indicator" data-animate>
           <span></span>
           <span>Scroll to explore SentinelSpark</span>
@@ -123,6 +152,11 @@
       </section>
 
       <section class="section trust" id="trust">
+        <div class="trust-lights" aria-hidden="true">
+          <span class="trust-light trust-light--one" data-parallax="18"></span>
+          <span class="trust-light trust-light--two" data-parallax="22"></span>
+          <span class="trust-light trust-light--three" data-parallax="26"></span>
+        </div>
         <div class="container" data-animate>
           <p class="eyebrow">Trusted by modern, fast-growing teams</p>
           <div class="trust-marquee" role="presentation">
@@ -160,6 +194,7 @@
           </div>
           <div class="feature-grid" data-animate>
             <article>
+              <span class="feature-icon" aria-hidden="true">🧠</span>
               <h3>Hyper-real simulations</h3>
               <p>
                 Launch realistic phishing tests in minutes, tuned to the latest attack trends and the tools your teams use
@@ -167,6 +202,7 @@
               </p>
             </article>
             <article>
+              <span class="feature-icon" aria-hidden="true">✨</span>
               <h3>Instant positive coaching</h3>
               <p>
                 Celebrate smart clicks and turn mistakes into aha moments with micro-lessons that are bite-sized, friendly,
@@ -174,6 +210,7 @@
               </p>
             </article>
             <article>
+              <span class="feature-icon" aria-hidden="true">📊</span>
               <h3>Insights execs love</h3>
               <p>
                 Give leadership the live dashboards and exportable reports they need to prove ROI and meet compliance in a
@@ -181,6 +218,7 @@
               </p>
             </article>
             <article>
+              <span class="feature-icon" aria-hidden="true">🚀</span>
               <h3>Built to scale effortlessly</h3>
               <p>
                 From 10 seats to 10,000, automate provisioning, reminders, and MSP management without a single spreadsheet.
@@ -301,6 +339,23 @@
               <h3>Zero</h3>
               <p>Manual spreadsheets. Integrations keep provisioning, billing, and audits automatic.</p>
             </article>
+          </div>
+          <div class="results-visual" aria-hidden="true" data-animate>
+            <div class="results-card" data-parallax="10">
+              <span class="label">Risk index</span>
+              <strong>▼ 47%</strong>
+              <span class="sub">quarter over quarter</span>
+            </div>
+            <div class="results-card" data-parallax="12">
+              <span class="label">Report streak</span>
+              <strong>18 days</strong>
+              <span class="sub">without a missed phish</span>
+            </div>
+            <div class="results-card" data-parallax="14">
+              <span class="label">Confidence score</span>
+              <strong>9.4/10</strong>
+              <span class="sub">avg learner self-rating</span>
+            </div>
           </div>
         </div>
       </section>
