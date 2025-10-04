@@ -338,6 +338,51 @@ a {
   box-shadow: var(--shadow-sm);
 }
 
+.platform-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2.5rem;
+}
+
+.tab-button {
+  border: 1px solid var(--border);
+  background: var(--surface-alt);
+  color: var(--text-muted);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tab-button:hover,
+.tab-button:focus-visible {
+  border-color: var(--accent);
+  color: var(--text);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+}
+
+.tab-button.is-active {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--accent);
+  box-shadow: var(--shadow-sm);
+}
+
+.tab-panels {
+  margin-top: 2.5rem;
+}
+
+.panel {
+  transition: opacity 0.2s ease;
+}
+
+.panel[hidden] {
+  opacity: 0;
+}
+
 .highlight {
   background: radial-gradient(circle at top right, rgba(14, 165, 233, 0.15), transparent 55%);
 }
