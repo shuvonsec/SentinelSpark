@@ -297,6 +297,11 @@ body.is-scrolled .site-header {
   gap: 6px;
 }
 
+.nav-toggle:focus-visible {
+  outline: 2px solid var(--accent-secondary);
+  outline-offset: 3px;
+}
+
 .nav-toggle .bar {
   display: block;
   width: 22px;

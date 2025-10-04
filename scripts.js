@@ -21,6 +21,15 @@ if (navToggle && nav) {
     navToggle.classList.toggle('active', isOpen);
   });
 
+  document.addEventListener('keydown', (event) => {
+    if (event.key !== 'Escape') return;
+    if (!nav.classList.contains('open')) return;
+
+    nav.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+    navToggle.classList.remove('active');
+  });
+
   nav.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', () => {
       if (nav.classList.contains('open')) {
