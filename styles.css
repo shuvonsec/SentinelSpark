@@ -52,6 +52,10 @@ body {
   overflow-x: hidden;
 }
 
+body.nav-open {
+  overflow: hidden;
+}
+
 body::before {
   content: "";
   position: fixed;
@@ -321,6 +325,24 @@ body.is-scrolled .site-header {
 
 .nav-toggle.active .bar:last-of-type {
   transform: translateY(-8px) rotate(-45deg);
+}
+
+.nav-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(3, 7, 18, 0.6);
+  backdrop-filter: blur(18px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  pointer-events: none;
+  z-index: 9;
+}
+
+body.nav-open .nav-backdrop {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .hero {
@@ -1534,6 +1556,7 @@ body.is-scrolled .site-header {
     visibility: hidden;
     transform: translateY(-10px);
     transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+    z-index: 11;
   }
 
   .site-nav.open {
