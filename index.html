@@ -118,31 +118,95 @@
       <div class="container">
         <span class="eyebrow">The Platform</span>
         <h2>Everything you need to build a human firewall.</h2>
-        <div class="feature-grid">
-          <article>
-            <h3>Phishing Simulations</h3>
-            <p>Pick from a library of templates or generate new ones with AI. Schedule sends, target teams, and track every action in real time.</p>
-          </article>
-          <article>
-            <h3>Instant Coaching Pages</h3>
-            <p>Employees who fall for a test are redirected to a friendly recap that highlights the clues they missed and reinforces best practices.</p>
-          </article>
-          <article>
-            <h3>Microlearning Library</h3>
-            <p>12 gamified lessons covering phishing, MFA, password hygiene, social engineering, and more—each under five minutes.</p>
-          </article>
-          <article>
-            <h3>Automated Reporting</h3>
-            <p>Live dashboards surface risky departments, trending threats, and improvements over time. Export PDF or CSV in one click.</p>
-          </article>
-          <article>
-            <h3>MSP Mode</h3>
-            <p>Manage multiple client environments with isolated data, white-labeled branding, and consolidated health scores.</p>
-          </article>
-          <article>
-            <h3>Compliance Ready</h3>
-            <p>Audit trails, completion certificates, and policy acknowledgements built in for SOC 2, ISO 27001, and more.</p>
-          </article>
+        <div class="platform-tabs" role="tablist" aria-label="Platform highlights">
+          <button
+            class="tab-button is-active"
+            type="button"
+            role="tab"
+            id="platform-tab-simulations"
+            aria-controls="platform-panel-simulations"
+            aria-selected="true"
+            tabindex="0"
+          >
+            Simulations &amp; Coaching
+          </button>
+          <button
+            class="tab-button"
+            type="button"
+            role="tab"
+            id="platform-tab-training"
+            aria-controls="platform-panel-training"
+            aria-selected="false"
+            tabindex="-1"
+          >
+            Learning &amp; Reporting
+          </button>
+          <button
+            class="tab-button"
+            type="button"
+            role="tab"
+            id="platform-tab-operations"
+            aria-controls="platform-panel-operations"
+            aria-selected="false"
+            tabindex="-1"
+          >
+            MSP &amp; Compliance
+          </button>
+        </div>
+        <div class="platform-panels">
+          <div
+            class="panel is-active"
+            id="platform-panel-simulations"
+            role="tabpanel"
+            aria-labelledby="platform-tab-simulations"
+          >
+            <div class="feature-grid">
+              <article>
+                <h3>Phishing Simulations</h3>
+                <p>Pick from a library of templates or generate new ones with AI. Schedule sends, target teams, and track every action in real time.</p>
+              </article>
+              <article>
+                <h3>Instant Coaching Pages</h3>
+                <p>Employees who fall for a test are redirected to a friendly recap that highlights the clues they missed and reinforces best practices.</p>
+              </article>
+            </div>
+          </div>
+          <div
+            class="panel"
+            id="platform-panel-training"
+            role="tabpanel"
+            aria-labelledby="platform-tab-training"
+            hidden
+          >
+            <div class="feature-grid">
+              <article>
+                <h3>Microlearning Library</h3>
+                <p>12 gamified lessons covering phishing, MFA, password hygiene, social engineering, and more—each under five minutes.</p>
+              </article>
+              <article>
+                <h3>Automated Reporting</h3>
+                <p>Live dashboards surface risky departments, trending threats, and improvements over time. Export PDF or CSV in one click.</p>
+              </article>
+            </div>
+          </div>
+          <div
+            class="panel"
+            id="platform-panel-operations"
+            role="tabpanel"
+            aria-labelledby="platform-tab-operations"
+            hidden
+          >
+            <div class="feature-grid">
+              <article>
+                <h3>MSP Mode</h3>
+                <p>Manage multiple client environments with isolated data, white-labeled branding, and consolidated health scores.</p>
+              </article>
+              <article>
+                <h3>Compliance Ready</h3>
+                <p>Audit trails, completion certificates, and policy acknowledgements built in for SOC 2, ISO 27001, and more.</p>
+              </article>
+            </div>
+          </div>
         </div>
       </div>
     </section>
