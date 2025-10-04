@@ -1096,4 +1096,8 @@ textarea {
   .marquee-track {
     animation: none;
   }
+
+  [data-tilt] {
+    transform: none !important;
+  }
 }

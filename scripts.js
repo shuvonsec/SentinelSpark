@@ -46,12 +46,26 @@ if (yearEl) {
 }
 
 const tiltElements = document.querySelectorAll('[data-tilt]');
+const tiltCleanups = new Map();
 
-if (tiltElements.length && !prefersReducedMotion.matches) {
+const resetTiltStyles = (element) => {
+  element.style.setProperty('--tilt-x', '0deg');
+  element.style.setProperty('--tilt-y', '0deg');
+  element.style.setProperty('--tilt-elevate', '0px');
+};
+
+tiltElements.forEach((element) => resetTiltStyles(element));
+
+const disableTilt = () => {
+  tiltCleanups.forEach((cleanup) => cleanup());
+  tiltCleanups.clear();
+  tiltElements.forEach((element) => resetTiltStyles(element));
+};
+
+const enableTilt = () => {
+  if (prefersReducedMotion.matches) return;
   tiltElements.forEach((element) => {
-    element.style.setProperty('--tilt-x', '0deg');
-    element.style.setProperty('--tilt-y', '0deg');
-    element.style.setProperty('--tilt-elevate', '0px');
+    if (tiltCleanups.has(element)) return;
 
     let frameId = null;
 
@@ -60,12 +74,10 @@ if (tiltElements.length && !prefersReducedMotion.matches) {
         cancelAnimationFrame(frameId);
         frameId = null;
       }
-      element.style.setProperty('--tilt-x', '0deg');
-      element.style.setProperty('--tilt-y', '0deg');
-      element.style.setProperty('--tilt-elevate', '0px');
+      resetTiltStyles(element);
     };
 
-    element.addEventListener('pointermove', (event) => {
+    const handlePointerMove = (event) => {
       const rect = element.getBoundingClientRect();
       const offsetX = (event.clientX - rect.left) / rect.width - 0.5;
       const offsetY = (event.clientY - rect.top) / rect.height - 0.5;
@@ -79,12 +91,31 @@ if (tiltElements.length && !prefersReducedMotion.matches) {
         element.style.setProperty('--tilt-y', `${rotateX.toFixed(2)}deg`);
         element.style.setProperty('--tilt-elevate', `${(Math.abs(rotateX) + Math.abs(rotateY)).toFixed(2)}px`);
       });
-    });
+    };
 
-    ['pointerleave', 'pointercancel', 'pointerup', 'blur'].forEach((eventName) => {
+    const resetEvents = ['pointerleave', 'pointercancel', 'pointerup', 'blur'];
+
+    element.addEventListener('pointermove', handlePointerMove);
+    resetEvents.forEach((eventName) => {
       element.addEventListener(eventName, resetTilt);
     });
+
+    tiltCleanups.set(element, () => {
+      element.removeEventListener('pointermove', handlePointerMove);
+      resetEvents.forEach((eventName) => {
+        element.removeEventListener(eventName, resetTilt);
+      });
+      if (frameId) {
+        cancelAnimationFrame(frameId);
+        frameId = null;
+      }
+      resetTiltStyles(element);
+    });
   });
+};
+
+if (tiltElements.length && !prefersReducedMotion.matches) {
+  enableTilt();
 }
 
 const tabButtons = document.querySelectorAll('.tab-button');
@@ -153,6 +184,27 @@ if (tabButtons.length) {
   });
 
   scheduleAutoTabs();
+}
+
+const handleMotionPreferenceChange = (event) => {
+  const shouldReduce = typeof event === 'object' && 'matches' in event ? event.matches : prefersReducedMotion.matches;
+
+  if (shouldReduce) {
+    disableTilt();
+    if (autoTabInterval) {
+      clearInterval(autoTabInterval);
+      autoTabInterval = null;
+    }
+  } else {
+    enableTilt();
+    scheduleAutoTabs();
+  }
+};
+
+if (typeof prefersReducedMotion.addEventListener === 'function') {
+  prefersReducedMotion.addEventListener('change', handleMotionPreferenceChange);
+} else if (typeof prefersReducedMotion.addListener === 'function') {
+  prefersReducedMotion.addListener(handleMotionPreferenceChange);
 }
 
 const animatedItems = document.querySelectorAll('[data-animate]');
