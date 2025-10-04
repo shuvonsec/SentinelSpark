@@ -323,11 +323,48 @@ a {
   margin-bottom: 1rem;
 }
 
+.platform-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.tab-button {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tab-button.is-active {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  box-shadow: var(--shadow-sm);
+}
+
+.tab-button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.platform-panels {
+  margin-top: 2.5rem;
+}
+
 .feature-grid {
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  margin-top: 3rem;
+}
+
+.panel[hidden] {
+  display: none;
 }
 
 .feature-grid article {
